@@ -4,11 +4,12 @@ import InputsTexto from "./InputsTexto";
 import InputsRadio from "./InputsRadio";
 import CheckBox from "./CheckBox";
 import Poblacion from "./Poblacion";
+import InputSubmit from "./InputSubmit_";
 
 export default function Form() {
   const ciudades = ["Alicante", "Madrid", "Sevilla", "Valencia"];
   return (
-    <div>
+    <div className="formulario">
       <InputsTexto
         labelFor="nombre"
         labelText="Nombre: "
@@ -84,6 +85,11 @@ export default function Form() {
         /* isChecked="checked" */
         labelFor="condiciones"
         labelText=" Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos."
+      />
+
+      <InputSubmit
+      inputType="submit"
+      inputValue="Enviar"
       />
     </div>
   );
